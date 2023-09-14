@@ -15,7 +15,8 @@ class FamilyStructure:
 
         # example list of members
         self._members = [{
-            "id": self._generateId(),
+            # "id": self._generateId(),
+            "id": 1,
             "first_name": "John",
             "last_name": last_name,
             "age": 25,
@@ -47,9 +48,8 @@ class FamilyStructure:
         return self._members
 
     def get_member(self, id):
-        # fill this method and update the return
         for element in self._members:
-            if element.id==id:
+            if element[id]==int(id):
                 return element
         return {}
 
